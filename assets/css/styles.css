@@ -1,0 +1,234 @@
+/* SUPPRESSION DE VALEURS NATIVES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COULEURS EN VARIABLES */
+:root {
+    --rose: #F4CCC4;
+    --cyan: #538BAA;
+    --jaune: #FEED3C;
+    --noir: #545454;
+    --marron: #BF5D3C;
+    --grey: #EEF1F3;
+}
+
+/* mise en place du container de Wolverine */
+#all {
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* attribution de la postion absolute à toutes les div enfant de #all */
+#all > div {
+    position: absolute;
+}
+
+/* dimensionnement et mise en place de tous les éléments de la figure Wolverine */
+
+/* ===== TETE ===== */
+
+/* regroupement des id parents pour leur attribuer une position relative */
+#tete, #bras-corps, #bas {
+    position: relative;
+}
+
+/* attribution de la position absolute à tous les enfants des id parents */
+#tete > div, #bras-corps > div, #bas > div {
+    position: absolute;
+}
+
+/* création du rond qui fait la tête */
+#rond {
+    background-color: var(--jaune);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* création du ovale pour la partie visible du visage */
+#ovale {
+    background-color: var(--rose);
+    width: 50px;
+    height: 15px;
+    border-radius: 50%;
+    top: 123px;
+    left: 50px;
+}
+
+/* création du rectange qui se mettra au dessus du ovale */
+#rectangle-tete {
+    width: 50px;
+    height: 40px;
+    background: var(--rose);
+    top: 90px;
+    left: 50px;
+}
+
+/* création des yeux */
+.yeux {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 140px solid var(--noir);
+    opacity: 0.9; /* réduction de l'opacité des yeux */
+}
+
+/* placement des yeux */
+#oeil1 {
+    rotate: -45deg; /* rotation des yeux pour les mettre dans le bon sens */
+    left: -25px;
+    top: -25px;
+}
+
+#oeil2 {
+    rotate: 45deg;
+    left: 95px;
+    top: -25px;
+}
+
+/*  ===== MILIEU DU CORPS ===== */
+
+#ventre {
+    background-color: var(--jaune);
+    width: 175px;
+    height: 200px;
+    top: 130px;
+    left: -14px;
+    z-index: -1; /* positionnement du ventre à l'arrière de la tête, des gants et de la ceinture */
+}
+
+.bras {
+    background: var(--rose);
+    width: 50px;
+    height: 175px;
+}
+
+#bras1 {
+    left: -64px;
+    top: 155px;
+}
+
+#bras2 {
+    left: 161px;
+    top: 155px;
+}
+
+.epaules {
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 60px solid var(--cyan);
+}
+
+#epaule1 {
+    top: 121px;
+    left: -95px;
+    rotate: 45deg;
+}
+
+#epaule2 {
+    left: 122px;
+    rotate: -45deg;
+    top: 121px;
+}
+
+.mains, .griffes {
+    z-index: 1; /* positionnement des mains et des griffes devant la ceinture */
+}
+
+.mains {
+    background: var(--cyan);
+    width: 60px;
+    height: 60px;
+}
+
+#main1 {
+    left: -70px;
+    top: 278px;
+}
+
+#main2 {
+    left: 157px;
+    top: 278px;
+}
+
+.griffes {
+    width: 5px;
+    height: 100px;
+    background: aliceblue;
+}
+
+#griffe1 {
+    top: 307px;
+    left: -55px;
+}
+
+#griffe2 {
+    top: 307px;
+    left: -42px;
+}
+
+#griffe3 {
+    top: 307px;
+    left: -29px;
+}
+
+#griffe4 {
+    top: 307px;
+    left: 171px;
+}
+
+#griffe5 {
+    top: 307px;
+    left: 184px;
+}
+
+#griffe6 {
+    top: 307px;
+    left: 197px;
+}
+
+/* BAS DU CORPS */
+
+.jambes {
+    background: var(--jaune);
+    width: 88px;
+    height: 175px;
+}
+
+#jambe1 {
+    top: 348px;
+    left: -19px;
+}
+
+#jambe2 {
+    top: 348px;
+    left: 78px;
+}
+
+#slip {
+    border-left: 93px solid transparent;
+    border-right: 92px solid transparent;
+    border-bottom: 93px solid var(--cyan);
+    top: 348px;
+    rotate: 180deg;
+    left: -19px;
+    opacity: 0.9;
+}
+
+#ceinture {
+    background: var(--marron);
+    width: 185px;
+    height: 50px;
+    top: 298px;
+    left: -19px;
+}
+
+h1 {
+    font-size: 400px;
+}
