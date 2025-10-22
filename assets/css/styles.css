@@ -15,11 +15,21 @@
     --grey: #EEF1F3;
 }
 
+#container-general {
+    display: flex;
+}
+
+
+
+
+
+/* ========== Wolverine B1DEV ========== */
+
 /* mise en place du container de Wolverine */
 #all {
     width: 100%;
     height: 100vh;
-    margin-top: 50px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -231,4 +241,175 @@
 
 h1 {
     font-size: 400px;
+}
+
+
+
+
+
+/* ========== Wolverine B2DEV ========== */
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#container > div {
+    position: absolute;
+}
+
+#container-jambes {
+    display: flex;
+    gap: 5px;
+    top: 500px
+}
+
+.jambes2 {
+    width: 80px;
+    height: 180px;
+    background-color: var(--jaune);
+}
+
+#buste {
+    width: 175px;
+    height: 250px;
+    background-color: var(--jaune);
+    top: 250px;
+    opacity: 0.8;
+}
+
+#culotte {
+    width: 175px;
+    height: 80px;
+    background-color: var(--cyan);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    top: 500px;
+    opacity: 0.9;
+}
+
+#ceinture2 {
+    width: 185px;
+    height: 40px;
+    background-color: var(--marron);
+    top: 460px;
+}
+
+#container-bras {
+    display: flex;
+    gap: 175px;
+    top: 260px;
+}
+
+.bras2 {
+    width: 50px;
+    height: 200px;
+    background-color: var(--rose);
+}
+
+#container-epaulettes {
+    display: flex;
+    gap: 175px;
+    top: 250px;
+}
+
+.epaulettes {
+    width: 80px;
+    height: 80px;
+    background-color: var(--cyan);
+    top: 500px;
+    opacity: 0.9;
+}
+
+#epaulette-gauche {
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+#epaulette-droite {
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+#container-gants {
+    display: flex;
+    gap: 165px;
+    top: 410px;
+}
+
+.gants {
+    width: 60px;
+    height: 60px;
+    background-color: var(--cyan);
+    opacity: 0.9;
+}
+
+#container-griffes {
+    display: flex;
+    gap: 200px;
+    top: 440px;
+}
+
+.container-trois-griffes {
+    display: flex;
+    gap: 6px;
+    top: 10px;
+}
+
+.griffes2 {
+    width: 5px;
+    height: 80px;
+    background-color: var(--grey);
+}
+
+#tete2 {
+    width: 175px;
+    height: 175px;
+    background-color: var(--jaune);
+    border-radius: 50%;
+    top: 100px;
+}
+
+#container-bouche {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 210px;
+}
+
+#bouche {
+    width: 70px;
+    height: 50px;
+    background-color: var(--rose);
+}
+
+#levres {
+    width: 70px;
+    height: 10px;
+    background-color: var(--rose);
+    border-radius: 50%;
+    position: absolute; 
+    top: 46px;
+}
+
+#container-yeux {
+    display: flex;
+    gap: 50px;
+    top: 50px;
+}
+
+.yeux2 {
+    width: 100px;
+    height: 175px;
+    background-color: var(--noir);
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    opacity: 0.9;
+}
+
+#oeil-gauche {
+    rotate: -40deg;
+}
+
+#oeil-droit {
+    rotate: 40deg;
 }
